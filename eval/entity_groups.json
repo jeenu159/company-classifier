@@ -1,0 +1,42 @@
+{
+ "note": "Spelling/format variants of the same company name as it appears in openFDA. A normaliser should map every variant in a group to one canonical entity. 'do_not_merge' pairs look similar but are different companies.",
+ "groups": [
+  {
+   "canonical": "Walgreens",
+   "variants": ["Walgreen Company", "Walgreens", "WALGREEN COMPANY", "Walgreen Co.", "WALGREENS", "WALGREEN CO.", "Walgreens Company", "Walgreens Co.", "WALGREENS CO."]
+  },
+  {
+   "canonical": "CVS",
+   "variants": ["CVS Pharmacy", "CVS Pharmacy, Inc.", "CVS", "CVS PHARMACY", "CVS PHARMACY, INC", "CVS Health", "CVS Pharmacy, Inc", "CVS PHARMACY, INC.", "CVS Pharmacy,Inc.", "CVS HEALTH CORP"]
+  },
+  {
+   "canonical": "Walmart",
+   "variants": ["Wal-Mart Stores Inc", "Walmart Inc.", "WALMART INC.", "Wal-Mart Stores, Inc.", "Walmart", "EQUATE (Wal-Mart Stores, Inc.) (see also WAL-MART INC)", "WALMART INC. (see also Equate)", "Wal-Mart Stores,Inc.,", "WAL-MART STORES INC", "Walmart, Inc.", "Walmart Inc"]
+  },
+  {
+   "canonical": "Unilever",
+   "variants": ["Conopco Inc. d/b/a/ Unilever", "Conopco, Inc. d/b/a Unilever", "Conopco d/b/a Unilever", "Conopco, Inc. d/b/a/ Unilever", "Conopco Inc. d/b/a Unilever", "CONOPCO Inc. d/b/a Unilever", "Conopco d/b/a/ Unilever"]
+  },
+  {
+   "canonical": "Dr. Reddy's",
+   "variants": ["Dr. Reddy's Laboratories Inc.", "Dr. Reddy's Laboratories Limited", "Dr.Reddys Laboratories Inc", "Dr. Reddys Laboratories Inc", "Dr.Reddy's Laboratories Limited", "Dr. Reddy's Labratories Inc.", "Dr. Reddys Laboratories Inc.", "Dr.Reddy's Laboratories Inc", "Dr. Reddy's Laboratories, Inc.", "Dr. Reddy's Laboratories Inc"]
+  },
+  {
+   "canonical": "Direct Rx",
+   "variants": ["Direct_Rx", "DIRECT RX", "DirectRx", "Direct Rx", "Direct_rx", "direct rx"]
+  },
+  {
+   "canonical": "Hahnemann Laboratories",
+   "variants": ["Hahnemann Laboratories, INC.", "Hahnemann Laboratories, Inc."]
+  },
+  {
+   "canonical": "NuCare Pharmaceuticals",
+   "variants": ["NuCare Pharmaceuticals,Inc.", "NuCare Pharmaceuticals, Inc."]
+  }
+ ],
+ "do_not_merge": [
+  ["Bausch & Lomb Incorporated", "Bausch Health US, LLC"],
+  ["Teva Pharmaceuticals USA, Inc.", "Teva Parenteral Medicines, Inc."],
+  ["Mylan Pharmaceuticals Inc.", "Mylan Institutional LLC"]
+ ]
+}

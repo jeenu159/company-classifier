@@ -1,0 +1,65 @@
+{"id": 1, "company": "Pfizer Laboratories Div Pfizer Inc", "label": "innovator_pharma", "also_ok": [], "reason": "Develops and markets its own branded Rx drugs", "check": false}
+{"id": 2, "company": "Merck Sharp & Dohme LLC", "label": "innovator_pharma", "also_ok": [], "reason": "Research-based maker of branded Rx drugs and vaccines", "check": false}
+{"id": 3, "company": "Eli Lilly and Company", "label": "innovator_pharma", "also_ok": [], "reason": "Branded Rx (insulins, GLP-1s)", "check": false}
+{"id": 4, "company": "Genentech, Inc.", "label": "innovator_pharma", "also_ok": [], "reason": "Biotech developing branded biologics", "check": false}
+{"id": 5, "company": "AbbVie Inc.", "label": "innovator_pharma", "also_ok": [], "reason": "Branded Rx and biologics", "check": false}
+{"id": 6, "company": "AstraZeneca Pharmaceuticals LP", "label": "innovator_pharma", "also_ok": [], "reason": "Branded Rx", "check": false}
+{"id": 7, "company": "Gilead Sciences, Inc.", "label": "innovator_pharma", "also_ok": [], "reason": "Branded antivirals", "check": false}
+{"id": 8, "company": "Novo Nordisk", "label": "innovator_pharma", "also_ok": [], "reason": "Branded insulins and GLP-1s", "check": false}
+{"id": 9, "company": "Aurobindo Pharma Limited", "label": "generic_manufacturer", "also_ok": [], "reason": "Large generic Rx manufacturer", "check": false}
+{"id": 10, "company": "Sun Pharmaceutical Industries, Inc.", "label": "generic_manufacturer", "also_ok": ["innovator_pharma"], "reason": "Mostly generics in the US, some specialty brands", "check": true}
+{"id": 11, "company": "Hikma Pharmaceuticals USA Inc.", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic injectables and oral generics", "check": false}
+{"id": 12, "company": "Camber Pharmaceuticals, Inc.", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx (Hetero group)", "check": false}
+{"id": 13, "company": "Zydus Lifesciences Limited", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx manufacturer", "check": false}
+{"id": 14, "company": "Lupin Pharmaceuticals, Inc.", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx manufacturer", "check": false}
+{"id": 15, "company": "Amneal Pharmaceuticals LLC", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx manufacturer", "check": false}
+{"id": 16, "company": "Macleods Pharmaceuticals Limited", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx manufacturer", "check": false}
+{"id": 17, "company": "Bryant Ranch Prepack", "label": "repackager", "also_ok": [], "reason": "Repackages drugs made by others", "check": false}
+{"id": 18, "company": "A-S Medication Solutions", "label": "repackager", "also_ok": [], "reason": "Repackager/relabeler", "check": false}
+{"id": 19, "company": "Proficient Rx LP", "label": "repackager", "also_ok": [], "reason": "Repackager/relabeler", "check": false}
+{"id": 20, "company": "REMEDYREPACK INC.", "label": "repackager", "also_ok": [], "reason": "Repackager (name says so)", "check": false}
+{"id": 21, "company": "NuCare Pharmaceuticals,Inc.", "label": "repackager", "also_ok": [], "reason": "Repackager despite 'Pharmaceuticals' in the name", "check": false}
+{"id": 22, "company": "PD-Rx Pharmaceuticals, Inc.", "label": "repackager", "also_ok": [], "reason": "Repackager for physician dispensing", "check": false}
+{"id": 23, "company": "Direct_Rx", "label": "repackager", "also_ok": [], "reason": "Repackager/relabeler", "check": false}
+{"id": 24, "company": "American Health Packaging", "label": "repackager", "also_ok": [], "reason": "Unit-dose repackager for hospitals", "check": false}
+{"id": 25, "company": "Cardinal Health 107, LLC", "label": "distributor", "also_ok": [], "reason": "Pharmaceutical wholesaler", "check": false}
+{"id": 26, "company": "HF Acquisition Co LLC, DBA HealthFirst", "label": "distributor", "also_ok": [], "reason": "Supplies emergency medication kits to dental/medical offices", "check": true}
+{"id": 27, "company": "McKesson Medical-Surgical", "label": "distributor", "also_ok": [], "reason": "Medical supply distributor", "check": false}
+{"id": 28, "company": "Henry Schein, Inc.", "label": "distributor", "also_ok": [], "reason": "Dental and medical supply distributor", "check": false}
+{"id": 29, "company": "Medline Industries, LP", "label": "distributor", "also_ok": [], "reason": "Medical supply distributor (also own-label products)", "check": true}
+{"id": 30, "company": "AmerisourceBergen Drug Corporation", "label": "distributor", "also_ok": [], "reason": "Pharmaceutical wholesaler", "check": false}
+{"id": 31, "company": "Major Pharmaceuticals", "label": "distributor", "also_ok": ["store_brand"], "reason": "Private-label OTC line sold to institutions and pharmacies", "check": true}
+{"id": 32, "company": "CVS Pharmacy", "label": "store_brand", "also_ok": [], "reason": "Retailer's private-label products", "check": false}
+{"id": 33, "company": "Walgreen Company", "label": "store_brand", "also_ok": [], "reason": "Retailer's private-label products", "check": false}
+{"id": 34, "company": "Amazon.com Services LLC", "label": "store_brand", "also_ok": [], "reason": "Amazon Basic Care private label", "check": false}
+{"id": 35, "company": "Topco Associates LLC", "label": "store_brand", "also_ok": ["distributor"], "reason": "Grocery co-op supplying TopCare private label", "check": true}
+{"id": 36, "company": "Target Corporation", "label": "store_brand", "also_ok": [], "reason": "Up&Up private label", "check": false}
+{"id": 37, "company": "Kroger Company", "label": "store_brand", "also_ok": [], "reason": "Grocery retailer private label", "check": false}
+{"id": 38, "company": "Wal-Mart Stores Inc", "label": "store_brand", "also_ok": [], "reason": "Equate private label", "check": false}
+{"id": 39, "company": "Dolgencorp Inc", "label": "store_brand", "also_ok": [], "reason": "Dollar General private label (DG Health, Rexall)", "check": false}
+{"id": 40, "company": "Kenvue Brands LLC", "label": "consumer_health", "also_ok": [], "reason": "Tylenol, Neutrogena, Listerine", "check": false}
+{"id": 41, "company": "Haleon US Holdings LLC", "label": "consumer_health", "also_ok": [], "reason": "Advil, Sensodyne, Centrum", "check": false}
+{"id": 42, "company": "Bayer HealthCare LLC.", "label": "consumer_health", "also_ok": ["innovator_pharma"], "reason": "Bayer's consumer entity (Aleve, Claritin)", "check": false}
+{"id": 43, "company": "Reckitt Benckiser LLC", "label": "consumer_health", "also_ok": [], "reason": "Mucinex, Lysol", "check": false}
+{"id": 44, "company": "Chattem, Inc.", "label": "consumer_health", "also_ok": [], "reason": "Gold Bond, Icy Hot", "check": false}
+{"id": 45, "company": "The Mentholatum Company", "label": "consumer_health", "also_ok": [], "reason": "Branded OTC topicals", "check": false}
+{"id": 46, "company": "Prestige Brands Holdings, Inc.", "label": "consumer_health", "also_ok": [], "reason": "Branded OTC portfolio", "check": false}
+{"id": 47, "company": "L. Perrigo Company", "label": "consumer_health", "also_ok": ["generic_manufacturer"], "reason": "Makes store-brand OTC for retailers", "check": true}
+{"id": 48, "company": "The Procter & Gamble Manufacturing Company", "label": "consumer_health", "also_ok": ["personal_care"], "reason": "Vicks, Crest, Pepto-Bismol", "check": true}
+{"id": 49, "company": "Boiron", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic remedies", "check": false}
+{"id": 50, "company": "Hahnemann Laboratories, INC.", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic pharmacy", "check": false}
+{"id": 51, "company": "Hyland's Inc.", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic remedies", "check": false}
+{"id": 52, "company": "Professional Complementary Health Formulas", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic formulas for practitioners", "check": false}
+{"id": 53, "company": "Deseret Biologicals, Inc.", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic formulas", "check": false}
+{"id": 54, "company": "Newton Laboratories, Inc.", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic remedies", "check": false}
+{"id": 55, "company": "Washington Homeopathic Products", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic remedies (name says so)", "check": false}
+{"id": 56, "company": "Rxhomeo Private Limited d.b.a. Rxhomeo, Inc", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic remedies", "check": false}
+{"id": 57, "company": "Bath & Body Works, Inc.", "label": "personal_care", "also_ok": [], "reason": "Hand sanitizers and body care", "check": false}
+{"id": 58, "company": "Parfums Christian Dior", "label": "personal_care", "also_ok": [], "reason": "Cosmetics with SPF claims", "check": false}
+{"id": 59, "company": "L'Oreal USA Products Inc", "label": "personal_care", "also_ok": [], "reason": "Cosmetics and skincare with SPF claims", "check": false}
+{"id": 60, "company": "e.l.f. Cosmetics, Inc.", "label": "personal_care", "also_ok": [], "reason": "Cosmetics with SPF claims", "check": false}
+{"id": 61, "company": "Beiersdorf Inc", "label": "personal_care", "also_ok": ["consumer_health"], "reason": "Nivea, Eucerin, Aquaphor", "check": false}
+{"id": 62, "company": "Conopco Inc. d/b/a/ Unilever", "label": "personal_care", "also_ok": ["consumer_health"], "reason": "Antiperspirants, skincare (Dove, Degree)", "check": true}
+{"id": 63, "company": "Supergoop, LLC", "label": "personal_care", "also_ok": [], "reason": "Sunscreen brand", "check": false}
+{"id": 64, "company": "Edgewell Personal Care Brands LLC", "label": "personal_care", "also_ok": [], "reason": "Banana Boat, Hawaiian Tropic, shaving", "check": false}
+{"id": 65, "company": "Colgate-Palmolive Company", "label": "personal_care", "also_ok": ["consumer_health"], "reason": "Fluoride toothpaste, oral care", "check": true}
