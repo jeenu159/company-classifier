@@ -3,6 +3,10 @@ import re
 import sys
 from collections import Counter
 import requests
+from dotenv import load_dotenv
+from langchain_tavily import TavilySearch
+
+load_dotenv()
 
 FDA_URL = "https://api.fda.gov/drug/label.json"
 SPF = re.compile(r"\bSPF\s?\d+")                            # sunscreen claims: SPF 30, SPF50
@@ -95,5 +99,28 @@ def fda_profile(company: str, sample: int = 100) -> dict:
     }
 
 
+_tavily = None
+
+
+def web_search(company: str, max_results: int = 3) -> dict:
+    """Search the web for what a company does. Returns short snippets, not full pages."""
+    global _tavily
+    if _tavily is None:
+        _tavily = TavilySearch(max_results=max_results)
+    query = f'"{company}" company business what does it do'
+    r = _tavily.invoke(query)
+    return {
+        "company": company,
+        "query": query,
+        "results": [
+            {"title": x["title"], "url": x["url"], "snippet": x["content"][:400]}
+            for x in r.get("results", [])
+        ],
+    }
+
+
 if __name__ == "__main__":
-    print(json.dumps(fda_profile(" ".join(sys.argv[1:])), indent=1))
+    if sys.argv[1] == "--web":
+        print(json.dumps(web_search(" ".join(sys.argv[2:])), indent=1))
+    else:
+        print(json.dumps(fda_profile(" ".join(sys.argv[1:])), indent=1))

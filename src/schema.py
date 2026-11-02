@@ -28,7 +28,9 @@ EVIDENCE_GUIDE = """How to read the FDA profile:
 - Retailers and retail buying groups mean store brand.
 - Distributors and wholesalers often LOOK like store brands or repackagers in FDA data, because they file
   labels for their own-brand products. Use what you know about the company's business, not just the labels.
-- Do not decide from words in the company name like "Pharmaceuticals" or "Laboratories"."""
+- Do not decide from words in the company name like "Pharmaceuticals" or "Laboratories".
+- Web results vary in quality. Official sources (government registrations, NAICS codes, company websites,
+  Bloomberg) outweigh directory or SEO pages, which often contain generic filler."""
 
 
 class Classification(BaseModel):
