@@ -5,17 +5,20 @@ from collections import Counter
 from datetime import datetime
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from schema import Classification, TAXONOMY
+from schema import Classification, TAXONOMY, EVIDENCE_GUIDE
 from tools import fda_profile
 
 load_dotenv()
 llm = ChatOpenAI(model="gpt-5-mini").with_structured_output(Classification)
 CACHE = "data/profiles.json"
+USE_GUIDE = os.getenv("USE_GUIDE", "1") == "1"
 
 PROMPT = """Classify this pharmaceutical-industry company into exactly one class.
 
 Classes:
 {taxonomy}
+
+{guide}
 
 Company name: {company}
 
@@ -37,13 +40,19 @@ for item in gold:
         with open(CACHE, "w", encoding="utf-8") as f:
             json.dump(profiles, f, indent=1)
 
+    prompt = PROMPT.format(
+        taxonomy=TAXONOMY,
+        guide=EVIDENCE_GUIDE if USE_GUIDE else "",
+        company=company,
+        profile=json.dumps(profiles[company], indent=1),
+    )
+
     t0 = time.perf_counter()
     try:
-        out = llm.invoke(PROMPT.format(taxonomy=TAXONOMY, company=company,
-                                       profile=json.dumps(profiles[company], indent=1)))
+        out = llm.invoke(prompt)
         pred, conf, evidence = out.label, out.confidence, out.evidence
     except Exception as e:
-        pred, conf, evidence = "ERROR", 0.0, [str(e)[:200]]
+        pred, conf, evidence = "ERROR", 0.0, [f"{type(e).__name__}: {e}"[:300]]
     latency = time.perf_counter() - t0
 
     strict = pred == item["label"]
@@ -53,9 +62,12 @@ for item in gold:
                     "evidence": evidence, "latency_s": round(latency, 2)})
     mark = "OK " if strict else ("ok~" if lenient else "XX ")
     print(f"{mark} {item['id']:>2}  {company[:40]:<40} gold={item['label']:<20} pred={pred:<20} conf={conf:.2f}")
+    if pred == "ERROR":
+        print(f"     {evidence[0]}")
 
 n = len(records)
-print(f"\nstrict accuracy  = {sum(r['strict'] for r in records) / n:.2f}")
+print(f"\nguide = {'on' if USE_GUIDE else 'off'}")
+print(f"strict accuracy  = {sum(r['strict'] for r in records) / n:.2f}")
 print(f"lenient accuracy = {sum(r['lenient'] for r in records) / n:.2f}")
 
 per_class = Counter(r["gold"] for r in records)
@@ -65,7 +77,8 @@ for label in sorted(per_class):
     print(f"  {label:<22} {right[label]}/{per_class[label]}")
 
 os.makedirs("eval/runs", exist_ok=True)
-run_file = f"eval/runs/baseline_{datetime.now():%Y%m%d_%H%M}.jsonl"
+tag = "guide" if USE_GUIDE else "noguide"
+run_file = f"eval/runs/baseline_{tag}_{datetime.now():%Y%m%d_%H%M}.jsonl"
 with open(run_file, "w", encoding="utf-8") as f:
     for r in records:
         f.write(json.dumps(r) + "\n")

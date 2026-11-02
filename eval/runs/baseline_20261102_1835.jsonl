@@ -1,0 +1,65 @@
+{"id": 1, "company": "Pfizer Laboratories Div Pfizer Inc", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 2, "company": "Merck Sharp & Dohme LLC", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 3, "company": "Eli Lilly and Company", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 4, "company": "Genentech, Inc.", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 5, "company": "AbbVie Inc.", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 6, "company": "AstraZeneca Pharmaceuticals LP", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 7, "company": "Gilead Sciences, Inc.", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 8, "company": "Novo Nordisk", "gold": "innovator_pharma", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 9, "company": "Aurobindo Pharma Limited", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 10, "company": "Sun Pharmaceutical Industries, Inc.", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 11, "company": "Hikma Pharmaceuticals USA Inc.", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 12, "company": "Camber Pharmaceuticals, Inc.", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 13, "company": "Zydus Lifesciences Limited", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 14, "company": "Lupin Pharmaceuticals, Inc.", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 15, "company": "Amneal Pharmaceuticals LLC", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 16, "company": "Macleods Pharmaceuticals Limited", "gold": "generic_manufacturer", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 17, "company": "Bryant Ranch Prepack", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 18, "company": "A-S Medication Solutions", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 19, "company": "Proficient Rx LP", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 20, "company": "REMEDYREPACK INC.", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 21, "company": "NuCare Pharmaceuticals,Inc.", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 22, "company": "PD-Rx Pharmaceuticals, Inc.", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 23, "company": "Direct_Rx", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 24, "company": "American Health Packaging", "gold": "repackager", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 25, "company": "Cardinal Health 107, LLC", "gold": "distributor", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 26, "company": "HF Acquisition Co LLC, DBA HealthFirst", "gold": "distributor", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 27, "company": "McKesson Medical-Surgical", "gold": "distributor", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 28, "company": "Henry Schein, Inc.", "gold": "distributor", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 29, "company": "Medline Industries, LP", "gold": "distributor", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 30, "company": "AmerisourceBergen Drug Corporation", "gold": "distributor", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 31, "company": "Major Pharmaceuticals", "gold": "distributor", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 32, "company": "CVS Pharmacy", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 33, "company": "Walgreen Company", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 34, "company": "Amazon.com Services LLC", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 35, "company": "Topco Associates LLC", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 36, "company": "Target Corporation", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 37, "company": "Kroger Company", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 38, "company": "Wal-Mart Stores Inc", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 39, "company": "Dolgencorp Inc", "gold": "store_brand", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 40, "company": "Kenvue Brands LLC", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 41, "company": "Haleon US Holdings LLC", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 42, "company": "Bayer HealthCare LLC.", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 43, "company": "Reckitt Benckiser LLC", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 44, "company": "Chattem, Inc.", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 45, "company": "The Mentholatum Company", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 46, "company": "Prestige Brands Holdings, Inc.", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 47, "company": "L. Perrigo Company", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 48, "company": "The Procter & Gamble Manufacturing Company", "gold": "consumer_health", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 49, "company": "Boiron", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 50, "company": "Hahnemann Laboratories, INC.", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 51, "company": "Hyland's Inc.", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 52, "company": "Professional Complementary Health Formulas", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 53, "company": "Deseret Biologicals, Inc.", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 54, "company": "Newton Laboratories, Inc.", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 55, "company": "Washington Homeopathic Products", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 56, "company": "Rxhomeo Private Limited d.b.a. Rxhomeo, Inc", "gold": "homeopathic", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 57, "company": "Bath & Body Works, Inc.", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 58, "company": "Parfums Christian Dior", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 59, "company": "L'Oreal USA Products Inc", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 60, "company": "e.l.f. Cosmetics, Inc.", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 61, "company": "Beiersdorf Inc", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 62, "company": "Conopco Inc. d/b/a/ Unilever", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 63, "company": "Supergoop, LLC", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 64, "company": "Edgewell Personal Care Brands LLC", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
+{"id": 65, "company": "Colgate-Palmolive Company", "gold": "personal_care", "pred": "ERROR", "confidence": 0.0, "strict": false, "lenient": false, "evidence": ["'guide'"], "latency_s": 0.0}
