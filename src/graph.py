@@ -6,7 +6,7 @@ import time
 import uuid
 import asyncio
 from langchain_mcp_adapters.client import MultiServerMCPClient
-from typing import Annotated, Literal, Optional, TypedDict
+from typing import Annotated, Literal, Optional, TypedDict, get_args
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 from langchain_openai import ChatOpenAI
@@ -19,8 +19,9 @@ from tools import fda_profile, web_search
 load_dotenv()
 
 PRIMARY, BACKUP = "gpt-5-mini", "gpt-4.1-mini"
-MAX_ATTEMPTS = 2
+MAX_ATTEMPTS = int(os.getenv("MAX_ATTEMPTS", "2"))
 HITL = os.getenv("HITL", "0") == "1"
+VALID_LABELS = set(get_args(Label))
 FDA_CACHE, WEB_CACHE = "data/profiles.json", "data/web.json"
 
 USE_MCP = os.getenv("USE_MCP", "0") == "1"
@@ -220,12 +221,15 @@ def route(state: State) -> str:
 def human_review(state: State):
     c, v = state["classification"], state["validation"]
     if HITL:
-        answer = interrupt({"company": state["company"], "proposed": c["label"],
-                            "validator_issue": v["issue"], "validator_suggests": v.get("suggested_label")})
+        payload = {"company": state["company"], "proposed": c["label"],
+                   "validator_issue": v["issue"], "validator_suggests": v.get("suggested_label")}
+        answer = interrupt(payload)
+        while answer not in VALID_LABELS:            # reject anything outside the taxonomy, ask again
+            answer = interrupt({**payload, "error": f"'{answer}' is not a valid label",
+                                "valid_labels": sorted(VALID_LABELS)})
         return {"classification": {**c, "label": answer, "confidence": 1.0},
                 "status": "human_reviewed", "trace": [f"human_review: set to {answer}"]}
     return {"status": "needs_review", "trace": ["human_review: queued for a human (auto mode)"]}
-
 
 def finalize(state: State):
     return {"status": "auto", "trace": ["finalize: accepted"]}
@@ -253,9 +257,12 @@ if __name__ == "__main__":
     company = " ".join(sys.argv[1:])
     config = {"configurable": {"thread_id": str(uuid.uuid4())}}
     result = graph.invoke({"company": company}, config)
-    if "__interrupt__" in result:                    # paused for a human
-        print(json.dumps(result["__interrupt__"][0].value, indent=1))
-        label = input("Your label: ").strip()
+    while "__interrupt__" in result:                  # paused for a human (may ask again on bad input)
+        info = result["__interrupt__"][0].value
+        print(json.dumps(info, indent=1))
+        label = input("Your label (Enter = accept validator's suggestion): ").strip()
+        if not label and info.get("validator_suggests"):
+            label = info["validator_suggests"]
         result = graph.invoke(Command(resume=label), config)
     for line in result["trace"]:
         print(" ", line)
