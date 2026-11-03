@@ -6,6 +6,7 @@ from collections import Counter
 import requests
 from dotenv import load_dotenv
 from langchain_tavily import TavilySearch
+from langsmith import traceable
 
 load_dotenv()
 
@@ -52,7 +53,7 @@ def _fetch_labels(company, sample):
                 time.sleep(2 ** attempt)              # 1s, 2s, 4s
     raise last_err
 
-
+@traceable(run_type="tool")
 def fda_profile(company: str, sample: int = 100) -> dict:
     """Summarise a company's FDA drug labels into evidence for classification."""
     data = _fetch_labels(company, sample)
@@ -117,7 +118,7 @@ def fda_profile(company: str, sample: int = 100) -> dict:
 
 _tavily = None
 
-
+@traceable(run_type="tool")
 def web_search(company: str, max_results: int = 3) -> dict:
     """Search the web for what a company does. Returns short snippets, not full pages."""
     global _tavily
