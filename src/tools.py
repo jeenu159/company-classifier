@@ -1,6 +1,7 @@
 import json
 import re
 import sys
+import time
 from collections import Counter
 import requests
 from dotenv import load_dotenv
@@ -31,17 +32,32 @@ def _key_token(company):
     return company.upper()
 
 
+def _fetch_labels(company, sample):
+    """Fetch labels with retries. openFDA sometimes returns 500 on large responses, so shrink the page."""
+    last_err = None
+    for limit in (sample, 50, 25):
+        for attempt in range(3):
+            try:
+                resp = requests.get(
+                    FDA_URL,
+                    params={"search": f'openfda.manufacturer_name.exact:"{company}"', "limit": limit},
+                    timeout=60,
+                )
+                if resp.status_code == 404:
+                    return None                       # no labels for this company
+                resp.raise_for_status()               # 429 / 5xx raise here and get retried
+                return resp.json()
+            except (requests.HTTPError, requests.ConnectionError, requests.Timeout) as e:
+                last_err = e
+                time.sleep(2 ** attempt)              # 1s, 2s, 4s
+    raise last_err
+
+
 def fda_profile(company: str, sample: int = 100) -> dict:
     """Summarise a company's FDA drug labels into evidence for classification."""
-    resp = requests.get(
-        FDA_URL,
-        params={"search": f'openfda.manufacturer_name.exact:"{company}"', "limit": sample},
-        timeout=60,
-    )
-    if resp.status_code == 404:
+    data = _fetch_labels(company, sample)
+    if data is None:
         return {"company": company, "found": False}
-    resp.raise_for_status()
-    data = resp.json()
     labels = data["results"]
     key = _key_token(company)
 

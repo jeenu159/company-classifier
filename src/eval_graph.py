@@ -7,7 +7,7 @@ from graph import build_graph
 
 graph = build_graph()
 
-with open("eval/companies_eval.jsonl", encoding="utf-8") as f:
+with open(os.getenv("EVAL_FILE", "eval/companies_eval.jsonl"), encoding="utf-8") as f:
     gold = [json.loads(line) for line in f if line.strip()]
 
 records = []

@@ -29,7 +29,7 @@ Use the company name and the profile. Pick the single best class."""
 
 profiles = json.load(open(CACHE, encoding="utf-8")) if os.path.exists(CACHE) else {}
 
-with open("eval/companies_eval.jsonl", encoding="utf-8") as f:
+with open(os.getenv("EVAL_FILE", "eval/companies_eval.jsonl"), encoding="utf-8") as f:
     gold = [json.loads(line) for line in f if line.strip()]
 
 records = []
