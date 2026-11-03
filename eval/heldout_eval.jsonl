@@ -1,0 +1,32 @@
+{"id": 101, "company": "Takeda Pharmaceuticals America, Inc.", "label": "innovator_pharma", "also_ok": [], "reason": "Research-based branded Rx", "check": false}
+{"id": 102, "company": "Boehringer Ingelheim Pharmaceuticals, Inc.", "label": "innovator_pharma", "also_ok": [], "reason": "Branded Rx (Jardiance, Ofev)", "check": false}
+{"id": 103, "company": "Sanofi-Aventis U.S. LLC", "label": "innovator_pharma", "also_ok": [], "reason": "Branded Rx and vaccines", "check": false}
+{"id": 104, "company": "Novartis Pharmaceuticals Corporation", "label": "innovator_pharma", "also_ok": [], "reason": "Branded Rx", "check": false}
+{"id": 105, "company": "Teva Pharmaceuticals USA, Inc.", "label": "generic_manufacturer", "also_ok": ["innovator_pharma"], "reason": "Largest US generic maker, some specialty brands", "check": true}
+{"id": 106, "company": "Cipla USA Inc.", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx", "check": false}
+{"id": 107, "company": "Torrent Pharmaceuticals Limited", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx", "check": false}
+{"id": 108, "company": "Alembic Pharmaceuticals Limited", "label": "generic_manufacturer", "also_ok": [], "reason": "Generic Rx", "check": false}
+{"id": 109, "company": "Preferred Pharmaceuticals Inc.", "label": "repackager", "also_ok": [], "reason": "Repackager despite 'Pharmaceuticals' in the name", "check": false}
+{"id": 110, "company": "Aphena Pharma Solutions - Tennessee, LLC", "label": "repackager", "also_ok": [], "reason": "Repackaging and relabeling services", "check": false}
+{"id": 111, "company": "Quality Care Products, LLC", "label": "repackager", "also_ok": [], "reason": "Repackager for physician dispensing", "check": false}
+{"id": 112, "company": "HAWAII REPACK, INC.", "label": "repackager", "also_ok": [], "reason": "Repackager (name says so)", "check": false}
+{"id": 113, "company": "Benco Dental", "label": "distributor", "also_ok": [], "reason": "Dental supply distributor; FDA labels are own-brand dental products", "check": false}
+{"id": 114, "company": "Patterson Dental", "label": "distributor", "also_ok": [], "reason": "Dental supply distributor", "check": false}
+{"id": 115, "company": "Darby Dental Supply, LLC", "label": "distributor", "also_ok": [], "reason": "Dental supply distributor", "check": false}
+{"id": 116, "company": "Twin Med LLC", "label": "distributor", "also_ok": [], "reason": "Medical supply distributor to long-term care", "check": false}
+{"id": 117, "company": "Rite Aid Corporation", "label": "store_brand", "also_ok": [], "reason": "Pharmacy retailer private label", "check": false}
+{"id": 118, "company": "Meijer, Inc.", "label": "store_brand", "also_ok": [], "reason": "Grocery retailer private label", "check": false}
+{"id": 119, "company": "Publix Super Markets Inc", "label": "store_brand", "also_ok": [], "reason": "Grocery retailer private label", "check": false}
+{"id": 120, "company": "Safeway", "label": "store_brand", "also_ok": [], "reason": "Grocery retailer private label", "check": false}
+{"id": 121, "company": "Medtech Products Inc.", "label": "consumer_health", "also_ok": [], "reason": "Prestige Brands' OTC subsidiary", "check": false}
+{"id": 122, "company": "Clarion Brands, LLC", "label": "consumer_health", "also_ok": [], "reason": "Branded OTC portfolio", "check": false}
+{"id": 123, "company": "Foundation Consumer Healthcare", "label": "consumer_health", "also_ok": [], "reason": "Branded OTC portfolio", "check": false}
+{"id": 124, "company": "Insight Pharmaceuticals LLC", "label": "consumer_health", "also_ok": [], "reason": "Branded OTC portfolio", "check": false}
+{"id": 125, "company": "King Bio Inc.", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic remedies", "check": false}
+{"id": 126, "company": "Guna spa", "label": "homeopathic", "also_ok": [], "reason": "Italian homeopathic maker", "check": false}
+{"id": 127, "company": "Homeocare Laboratories", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic remedies", "check": false}
+{"id": 128, "company": "Liddell Laboratories, Inc.", "label": "homeopathic", "also_ok": [], "reason": "Homeopathic oral sprays", "check": false}
+{"id": 129, "company": "Shiseido Americas Corporation", "label": "personal_care", "also_ok": [], "reason": "Cosmetics with SPF claims", "check": false}
+{"id": 130, "company": "CLINIQUE LABORATORIES LLC", "label": "personal_care", "also_ok": [], "reason": "Cosmetics with SPF claims", "check": false}
+{"id": 131, "company": "COOLA, LLC", "label": "personal_care", "also_ok": [], "reason": "Sunscreen brand", "check": false}
+{"id": 132, "company": "GOJO Industries, Inc.", "label": "personal_care", "also_ok": ["consumer_health"], "reason": "Purell hand sanitizer", "check": true}
