@@ -4,6 +4,8 @@ import os
 import sys
 import time
 import uuid
+import asyncio
+from langchain_mcp_adapters.client import MultiServerMCPClient
 from typing import Annotated, Literal, Optional, TypedDict
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
@@ -20,6 +22,35 @@ PRIMARY, BACKUP = "gpt-5-mini", "gpt-4.1-mini"
 MAX_ATTEMPTS = 2
 HITL = os.getenv("HITL", "0") == "1"
 FDA_CACHE, WEB_CACHE = "data/profiles.json", "data/web.json"
+
+USE_MCP = os.getenv("USE_MCP", "0") == "1"
+_mcp_tools = None
+
+
+def mcp_call(tool_name, company):
+    """Call a tool on the company-intel MCP server and parse its JSON text result."""
+    async def _run():
+        global _mcp_tools
+        if _mcp_tools is None:
+            client = MultiServerMCPClient({
+                "company-intel": {
+                    "command": sys.executable,
+                    "args": [os.path.join(os.path.dirname(__file__), "mcp_server.py")],
+                    "transport": "stdio",
+                }
+            })
+            _mcp_tools = {t.name: t for t in await client.get_tools()}
+        result = await _mcp_tools[tool_name].ainvoke({"company": company})
+        return json.loads(result[0]["text"])
+    return asyncio.run(_run())
+
+
+def get_fda(company):
+    return mcp_call("fda_profile", company) if USE_MCP else fda_profile(company)
+
+
+def get_web(company):
+    return mcp_call("web_search", company) if USE_MCP else web_search(company)
 
 
 # ---------- structured LLMs with retries and a fallback model ----------
@@ -142,16 +173,17 @@ def needs_web(fda):
 
 def research(state: State):
     company = state["company"]
-    fda = cached(FDA_CACHE, company, lambda c: with_retry(fda_profile, c))
+    fda = cached(FDA_CACHE, company, lambda c: with_retry(get_fda, c))
     need, reason = needs_web(fda)
     web = None
     if need:
         try:
-            web = cached(WEB_CACHE, company, lambda c: with_retry(web_search, c))
+            web = cached(WEB_CACHE, company, lambda c: with_retry(get_web, c))
         except Exception as e:                       # fallback: carry on with FDA evidence only
             reason += f" | web search failed: {type(e).__name__}"
+    via = "MCP" if USE_MCP else "direct"
     return {"fda": fda, "web": web, "used_web": web is not None, "attempts": 0,
-            "trace": [f"research: web={'yes' if web else 'no'} ({reason})"]}
+            "trace": [f"research ({via}): web={'yes' if web else 'no'} ({reason})"]}
 
 def classify(state: State):
     feedback = ""
